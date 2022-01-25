@@ -16,7 +16,7 @@ public class Database {
     // For Local PostgreSQL
     private final String host = "ec2-54-228-95-1.eu-west-1.compute.amazonaws.com";
 
-    private final String database = "d5a914vnpdfe0c";
+    private final String database = "d5a9104vnpdfe0c";
     private final int port = 5432;
     private final String user = "ymtpxjptznhzyc ";
     private final String pass = "7ff533a1c273036653de018228eddbace7b9ccf0a587d6b7e1449c3f6dcb54e7";

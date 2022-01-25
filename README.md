@@ -7,3 +7,4 @@
 ## Technologie :
 
 Le super android studio !
+Base de donnée POSTEGRESQL HEBERGER SUR HEROKU

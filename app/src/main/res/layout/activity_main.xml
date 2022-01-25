@@ -15,6 +15,7 @@
         android:layout_marginTop="103dp"
         android:layout_marginEnd="90dp"
         android:text="Se connecter"
+        android:textAlignment="center"
         android:textColor="#7f00ff"
         android:textSize="100px" />
 
@@ -93,7 +94,7 @@
         android:layout_marginBottom="149dp"
         android:focusable="true"
         android:fontFamily="sans-serif"
-        android:text="Vous n'avez pas de compte ? Créé-le"
+        android:text="Vous n'avez pas de compte ? Créez-le"
         android:textColor="#7f00ff"
         android:textSize="12dp" />
 

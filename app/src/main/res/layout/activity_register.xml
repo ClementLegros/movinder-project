@@ -17,6 +17,7 @@
         android:layout_marginEnd="120dp"
         android:layout_marginBottom="586dp"
         android:text="S'inscrire"
+        android:textAlignment="center"
         android:textColor="#7f00ff"
         android:textSize="100px" />
 

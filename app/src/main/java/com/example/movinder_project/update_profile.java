@@ -88,4 +88,3 @@ public class update_profile extends AppCompatActivity {
     }
 
 }
-}

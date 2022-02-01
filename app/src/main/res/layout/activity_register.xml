@@ -19,7 +19,8 @@
         android:text="S'inscrire"
         android:textAlignment="center"
         android:textColor="#7f00ff"
-        android:textSize="100px" />
+        android:textSize="100px"
+        android:contentDescription="S'inscrire sur l'application Movinder"/>
 
     <EditText
         android:id="@+id/user2"
@@ -36,7 +37,8 @@
         android:gravity="start"
         android:hint="Login"
         android:inputType="text"
-        android:textCursorDrawable="@null" />
+        android:textCursorDrawable="@null"
+        android:contentDescription="Créez votre identifiant de connexion"/>
 
     <EditText
         android:id="@+id/pass2"
@@ -53,7 +55,8 @@
         android:gravity="start"
         android:hint="Mot de passe"
         android:inputType="textPassword"
-        android:textCursorDrawable="@null" />
+        android:textCursorDrawable="@null"
+        android:contentDescription="Créez votre mot de passe de connexion"/>
 
     <ImageView
         android:id="@+id/toggle_view2"
@@ -79,7 +82,8 @@
         android:gravity="start"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textCursorDrawable="@null" />
+        android:textCursorDrawable="@null"
+        android:contentDescription="Renseignez votre adresse mail"/>
 
     <EditText
         android:id="@+id/editTextPhone"
@@ -93,7 +97,8 @@
         android:layout_marginBottom="228dp"
         android:ems="10"
         android:hint="Numéro de téléphone"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:contentDescription="Renseignez votre numéro de téléphone"/>
 
     <Button
         android:id="@+id/register"
@@ -113,7 +118,8 @@
         android:text="Je m'inscris"
         android:textAllCaps="false"
         android:textColor="#FFF"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:contentDescription="Bouton pour valider son inscription"/>
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -129,6 +135,7 @@
         android:layout_marginBottom="500dp"
         android:ems="10"
         android:hint="Nom"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:contentDescription="Renseignez votre nom"/>
 
 </RelativeLayout>

@@ -17,7 +17,8 @@
         android:text="Se connecter"
         android:textAlignment="center"
         android:textColor="#7f00ff"
-        android:textSize="100px" />
+        android:textSize="100px"
+        android:contentDescription="Se connecter à l'application Movinder"/>
 
     <EditText
         android:id="@+id/user1"
@@ -34,7 +35,8 @@
         android:gravity="start"
         android:hint="Login"
         android:inputType="text"
-        android:textCursorDrawable="@null" />
+        android:textCursorDrawable="@null"
+        android:contentDescription="Saisissez votre identifiant Movinder"/>
 
     <EditText
         android:id="@+id/pass1"
@@ -51,7 +53,8 @@
         android:gravity="start"
         android:hint="Mot de passe"
         android:inputType="textPassword"
-        android:textCursorDrawable="@null" />
+        android:textCursorDrawable="@null"
+        android:contentDescription="Saisissez votre mot de passe Movinder"/>
 
     <ImageView
         android:id="@+id/toggle_view1"
@@ -78,7 +81,8 @@
         android:text="SE CONNECTER"
         android:textAllCaps="false"
         android:textColor="#FFF"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:contentDescription="Se connecter à l'application Movinder"/>
 
     <TextView
         android:id="@+id/register1"
@@ -96,6 +100,7 @@
         android:fontFamily="sans-serif"
         android:text="Vous n'avez pas de compte ? Créez-le"
         android:textColor="#7f00ff"
-        android:textSize="12dp" />
+        android:textSize="12dp"
+        android:contentDescription="Si vous n'avez pas de compte, appuyez sur ce lien pour en créer un"/>
 
 </RelativeLayout>

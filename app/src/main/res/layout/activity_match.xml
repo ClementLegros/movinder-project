@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Match">
+
+    <Button
+        android:id="@+id/btJamaisVu"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="91dp"
+        android:text="jamais vu"
+        app:layout_constraintBottom_toTopOf="@+id/btMatch"
+        app:layout_constraintEnd_toStartOf="@+id/btJaime"
+        app:layout_constraintStart_toEndOf="@+id/btJaimePas"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="373dp"
+        android:layout_height="447dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="19dp"
+        android:contentDescription="affiche_film"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btMessages"
+        android:layout_width="116dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="204dp"
+        android:text="Messages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btMatch"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="63dp"
+        android:text="Match"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button12"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btMessages"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="30dp"
+        android:text="Stats"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btJaimePas"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="91dp"
+        android:text="j'aime pas"
+        app:layout_constraintBottom_toTopOf="@+id/btMessages"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btJaime"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="89dp"
+        android:text="j'aime"
+        app:layout_constraintBottom_toTopOf="@+id/button12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

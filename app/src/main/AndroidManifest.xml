@@ -3,7 +3,6 @@
     package="com.example.movinder_project">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -15,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Movinderproject"
         android:usesCleartextTraffic="true">
-        <activity android:name=".update_profile"></activity>
+        <activity android:name=".Match"></activity>
+        <activity android:name=".update_profile" />
         <activity android:name=".Register" />
         <activity android:name=".MainActivity">
             <intent-filter>

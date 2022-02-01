@@ -31,7 +31,7 @@ public class Database {
         System.out.println("connection status:" + status);
     }
 
-    private void connect()
+    public void connect()
     {
         Thread thread = new Thread(new Runnable() {
             @Override
@@ -49,6 +49,7 @@ public class Database {
                     status = false;
                     System.out.print(e.getMessage());
                     e.printStackTrace();
+                    System.out.println("échouer");
                 }
             }
         });

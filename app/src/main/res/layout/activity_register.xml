@@ -23,7 +23,7 @@
         android:contentDescription="S'inscrire sur l'application Movinder"/>
 
     <EditText
-        android:id="@+id/user2"
+        android:id="@+id/editTextLogin"
         android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -33,15 +33,15 @@
         android:layout_marginTop="250dp"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
+        android:contentDescription="Créez votre identifiant de connexion"
         android:drawablePadding="5dp"
         android:gravity="start"
         android:hint="Login"
         android:inputType="text"
-        android:textCursorDrawable="@null"
-        android:contentDescription="Créez votre identifiant de connexion"/>
+        android:textCursorDrawable="@null" />
 
     <EditText
-        android:id="@+id/pass2"
+        android:id="@+id/editTextMdp"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -68,7 +68,7 @@
         android:clickable="true" />
 
     <EditText
-        android:id="@+id/email2"
+        android:id="@+id/editTextEmail"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -114,15 +114,16 @@
         android:layout_marginEnd="75dp"
         android:layout_marginRight="40dp"
         android:layout_marginBottom="105dp"
+        android:contentDescription="Bouton pour valider son inscription"
         android:gravity="center"
+        android:onClick="toRegister"
         android:text="Je m'inscris"
         android:textAllCaps="false"
         android:textColor="#FFF"
-        android:textSize="20dp"
-        android:contentDescription="Bouton pour valider son inscription"/>
+        android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextNom"
         android:layout_width="327dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -133,9 +134,9 @@
         android:layout_marginTop="186dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="500dp"
+        android:contentDescription="Renseignez votre nom"
         android:ems="10"
         android:hint="Nom"
-        android:inputType="textPersonName"
-        android:contentDescription="Renseignez votre nom"/>
+        android:inputType="textPersonName" />
 
 </RelativeLayout>

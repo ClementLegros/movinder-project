@@ -21,4 +21,8 @@ public interface UtilisateurPlaceHolderAPI {
     @POST("/registerUser")
     Call<ResponseBody> registerUser(@Field("nom") String nom, @Field("email") String email, @Field("num") String num, @Field("mdp") String mdp, @Field("sexe") String sexe, @Field("orientation") String orientation);
 
+    @FormUrlEncoded
+    @POST("/registerLike")
+    Call<ResponseBody> registerLike(@Field("idUser") int idUser, @Field("idFilm") int idFilm, @Field("avis") boolean avis);
+
 }

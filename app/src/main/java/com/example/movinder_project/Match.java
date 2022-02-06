@@ -3,33 +3,15 @@ package com.example.movinder_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
 
-import com.android.volley.Request;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.movinder_project.Model.Film;
 import com.example.movinder_project.Model.FilmPlaceHolderAPI;
-import com.example.movinder_project.Model.InputStreamOperations;
-import com.example.movinder_project.Model.MySingleton;
-import com.example.movinder_project.Model.Utilisateur;
 import com.example.movinder_project.Model.UtilisateurPlaceHolderAPI;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.transform.Result;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -44,6 +26,9 @@ public class Match extends AppCompatActivity {
     private FilmPlaceHolderAPI myFilmPlaceHolderAPI;
     private Context context;
     private List<Film> movieList;
+    private UtilisateurPlaceHolderAPI myUtilisateurPlaceHolderAPI;
+
+    private int idFilmActuelle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +47,6 @@ public class Match extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         myFilmPlaceHolderAPI = retrofit.create(FilmPlaceHolderAPI.class);
-
-
         get_movies();
 
     }
@@ -87,4 +70,43 @@ public class Match extends AppCompatActivity {
         });
     }
 
+    public void likeMovie(View view) {
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://themovinder.herokuapp.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        myUtilisateurPlaceHolderAPI = retrofit.create(UtilisateurPlaceHolderAPI.class);
+        movieLikedOrNot(true);
+    }
+
+    public void dontLikeMovie(View view)
+    {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://themovinder.herokuapp.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        myUtilisateurPlaceHolderAPI = retrofit.create(UtilisateurPlaceHolderAPI.class);
+        movieLikedOrNot(false);
+    }
+
+    void movieLikedOrNot(boolean avis)
+    {
+        Call<ResponseBody> call = myUtilisateurPlaceHolderAPI.registerLike(idUser, idFilmActuelle, avis);
+
+        call.enqueue(new Callback<ResponseBody>() {
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()) {
+                    Log.d("API", "Like insert");
+                } else {
+                    Log.d("API", "Like Failed");
+                }
+            }
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                Log.d("API", "The request API as a problem");
+            }
+        });
+    }
 }

@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Utilisateur>> call, Response<List<Utilisateur>> response) {
                 if (response.isSuccessful()) {
                     Log.d("Success", "Got something");
-                     posts = response.body();
+                    posts = response.body();
                     Utilisateur user = posts.get(0);
                     Intent i = new Intent(context, Match.class);
                     i.putExtra("idUser", user.getId_utilisateur());
@@ -91,5 +91,10 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+    }
+
+    public void goToRegister(View view) {
+        Intent i = new Intent(this, Register.class);
+        startActivity(i);
     }
 }

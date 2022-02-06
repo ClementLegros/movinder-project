@@ -2,18 +2,12 @@ package com.example.movinder_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.movinder_project.Model.Utilisateur;
 import com.example.movinder_project.Model.UtilisateurPlaceHolderAPI;
-
-import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -37,9 +31,11 @@ public class Register extends AppCompatActivity {
         /* A COMPLETER */
 
         EditText editTextNom = findViewById(R.id.editTextNom);
-        EditText editTextPassword = findViewById(R.id.userPassword);
-        EditText editTextEmail = findViewById(R.id.editTextEmail);
+        EditText editTextPassword = findViewById(R.id.editTextMdp);
+        EditText editTextEmail = findViewById(R.id.editTextMail);
         EditText editTextTel = findViewById(R.id.editTextPhone);
+        EditText editTextSexe = findViewById(R.id.editTextSexe);
+        EditText editTextOrientation = findViewById(R.id.idTextOrientation);
 
         /* A COMPLETER */
 
@@ -47,6 +43,8 @@ public class Register extends AppCompatActivity {
         String password = editTextPassword.getText().toString();
         String email = editTextEmail.getText().toString();
         String tel = editTextTel.getText().toString();
+        String sexe = editTextSexe.getText().toString();
+        String orientation = editTextOrientation.getText().toString();
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://themovinder.herokuapp.com")
@@ -55,6 +53,7 @@ public class Register extends AppCompatActivity {
         myUtilisayeurPlaceHolderAPI = retrofit.create(UtilisateurPlaceHolderAPI.class);
 
         //Lié la methode registerAPI
+        registerAPI(nom, password, email, tel, sexe, orientation);
     }
 
     public void registerAPI(String nom, String password, String email, String num, String sexe, String orientation)

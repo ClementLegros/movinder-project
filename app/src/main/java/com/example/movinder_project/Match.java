@@ -3,14 +3,21 @@ package com.example.movinder_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.Icon;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.example.movinder_project.Model.Conversation;
 import com.example.movinder_project.Model.Film;
 import com.example.movinder_project.Model.FilmPlaceHolderAPI;
 import com.example.movinder_project.Model.UtilisateurPlaceHolderAPI;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 
 import okhttp3.ResponseBody;
@@ -19,6 +26,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Url;
 
 public class Match extends AppCompatActivity {
 
@@ -29,6 +37,7 @@ public class Match extends AppCompatActivity {
     private UtilisateurPlaceHolderAPI myUtilisateurPlaceHolderAPI;
 
     private int idFilmActuelle;
+    private Uri uriFilm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,5 +117,11 @@ public class Match extends AppCompatActivity {
                 Log.d("API", "The request API as a problem");
             }
         });
+    }
+
+    public void goToMessage(View view) {
+        Intent i = new Intent(this, ConversationView.class);
+        i.putExtra("idUser", idUser);
+        startActivity(i);
     }
 }

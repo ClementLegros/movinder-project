@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Clement/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_conversation.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/Clement/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_main.xml" value="0.28306159420289856" />
+        <entry key="..\:/Users/Clement/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_match.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/Clement/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_messagerie.xml" value="0.32864583333333336" />
+        <entry key="..\:/Users/Clement/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_register.xml" value="0.45969202898550726" />
+        <entry key="..\:/Users/Clement/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_update_profile.xml" value="0.32864583333333336" />
         <entry key="..\:/Users/YapiC/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/YapiC/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_match.xml" value="0.264" />
         <entry key="..\:/Users/YapiC/AndroidStudioProjects/movinder-project/app/src/main/res/layout/activity_register.xml" value="0.264" />

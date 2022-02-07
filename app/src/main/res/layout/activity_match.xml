@@ -19,11 +19,11 @@
         app:layout_constraintEnd_toStartOf="@+id/btJaime"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toEndOf="@+id/btJaimePas"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewFilm"
         android:layout_width="373dp"
         android:layout_height="447dp"
         android:layout_marginStart="19dp"
@@ -41,10 +41,11 @@
         android:layout_height="61dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="204dp"
+        android:onClick="goToMessage"
         android:text="Messages"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -59,7 +60,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button12"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toEndOf="@+id/btMessages"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -71,7 +72,7 @@
         android:text="Stats"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -85,7 +86,7 @@
         android:text="j'aime pas"
         app:layout_constraintBottom_toTopOf="@+id/btMessages"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -99,7 +100,7 @@
         android:text="j'aime"
         app:layout_constraintBottom_toTopOf="@+id/button12"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFilm"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

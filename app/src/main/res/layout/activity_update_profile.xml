@@ -26,170 +26,182 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         app:layout_constraintTop_toBottomOf="@id/tv_heading"
-        >
+        tools:layout_editor_absoluteX="16dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="true"
-            android:focusableInTouchMode="true"
-            >
+            android:focusableInTouchMode="true">
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_image"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="20dp"
+                android:importantForAccessibility="yes"
+                android:nextFocusDown="@id/nom"
                 android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                >
+                app:layout_constraintWidth_percent="0.7">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="165dp" />
             </com.google.android.material.textfield.TextInputLayout>
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_first_name"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="14dp"
-                android:textColorHint="#808080"
-                app:layout_constraintTop_toBottomOf="@+id/layout_image"
                 android:contentDescription="Modifiez votre image de profil"
-                >
+                android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_image"
+                app:layout_constraintWidth_percent="0.7">
 
                 <EditText
                     android:id="@+id/nom"
-                    android:layout_width="match_parent"
+                    android:layout_width="289dp"
                     android:layout_height="43dp"
                     android:background="#00000000"
+                    android:contentDescription="Modifiez votre nom"
+                    android:focusable="true"
                     android:gravity="center"
                     android:hint="Nom"
+                    android:importantForAccessibility="yes"
+                    android:nextFocusUp="@id/layout_first_name"
+                    android:nextFocusDown="@id/et_login"
                     android:padding="30dp"
                     android:textColor="#000000"
                     android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:contentDescription="Modifiez votre nom"/>
+                    android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_last_name"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="14dp"
                 android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout_first_name"
-                >
+                app:layout_constraintWidth_percent="0.7">
 
                 <EditText
                     android:id="@+id/et_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00000000"
+                    android:contentDescription="Modifiez votre login"
                     android:gravity="center"
                     android:hint="Login"
+                    android:importantForAccessibility="yes"
+                    android:nextFocusUp="@id/layout_first_name"
+                    android:nextFocusDown="@id/et_email"
                     android:padding="10dp"
                     android:textColor="#000000"
                     android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:contentDescription="Modifiez votre login"/>
+                    android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_email"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="14dp"
                 android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout_last_name"
-                >
+                app:layout_constraintWidth_percent="0.7">
 
                 <EditText
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:background="#00000000"
+                    android:contentDescription="Modifiez votre email"
                     android:gravity="center"
+                    android:hint="Email"
+                    android:importantForAccessibility="yes"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusUp="@id/et_login"
+                    android:nextFocusDown="@id/et_numero"
                     android:padding="10dp"
                     android:textColor="#000000"
                     android:textColorHint="#808080"
-                    android:background="#00000000"
-                    android:textSize="15sp"
-                    android:inputType="textEmailAddress"
-                    android:contentDescription="Modifiez votre email"
-                    />
+                    android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_contact_no"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="14dp"
                 android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout_email"
-                >
+                app:layout_constraintWidth_percent="0.7">
 
                 <EditText
                     android:id="@+id/et_numero"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00000000"
+                    android:contentDescription="Modifiez votre numéro de téléphone"
                     android:gravity="center"
                     android:hint="Numéro de téléphone"
+                    android:importantForAccessibility="yes"
                     android:inputType="phone"
+                    android:nextFocusUp="@id/et_email"
+                    android:nextFocusDown="@id/etPasswod"
                     android:padding="10dp"
                     android:textColor="#000000"
                     android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:contentDescription="Modifiez votre numéro de téléphone"/>
+                    android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layout_des"
                 android:layout_width="0dp"
-                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="14dp"
                 android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout_contact_no"
-                >
+                app:layout_constraintWidth_percent="0.7">
 
                 <EditText
                     android:id="@+id/etPasswod"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#00000000"
+                    android:contentDescription="Modifiez votre mot de passe"
                     android:gravity="center"
                     android:hint="Mot de passe"
+                    android:importantForAccessibility="yes"
                     android:inputType="text"
+                    android:nextFocusUp="@id/et_numero"
+                    android:nextFocusDown="@id/bt_register"
                     android:padding="10dp"
                     android:textColor="#000000"
                     android:textColorHint="#808080"
-                    android:textSize="15sp"
-                    android:contentDescription="Modifiez votre mot de passe"/>
+                    android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -200,7 +212,10 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
                 android:background="@color/design_default_color_primary"
+                android:contentDescription="Enregistrement de vos modifications"
                 android:elevation="2dp"
+                android:importantForAccessibility="yes"
+                android:nextFocusUp="@id/etPasswod"
                 android:onClick="performEditProfile"
                 android:text="Enregistrer"
                 android:textAllCaps="false"
@@ -209,8 +224,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/layout_des"
-                app:layout_constraintWidth_percent="0.7"
-                android:contentDescription="Enregistrement de vos modifications"/>
+                app:layout_constraintWidth_percent="0.7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

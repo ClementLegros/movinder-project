@@ -8,8 +8,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface MatchResultPlaceHolderAPI {
-    @GET("/user/{idUtilisateur}")
-    List<MatchResult> getsUserGenreResult(@Path(value = "idUtilisateur", encoded = false)int idUtilisateur);
+    @GET("/match/{idUtilisateur}")
+    Call<List<MatchResult>> getMatchResult(@Path(value = "idUtilisateur", encoded = false)int idUtilisateur);
 
 
 

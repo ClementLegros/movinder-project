@@ -33,7 +33,7 @@ public class MatchResultView extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        MatchResultPlaceHolderAPI myMatchResultPlaceHolderAPI = retrofit.create(MatchResultPlaceHolderAPI.class);
+         myMatchResultPlaceHolderAPI = retrofit.create(MatchResultPlaceHolderAPI.class);
 
 
 
@@ -42,7 +42,8 @@ public class MatchResultView extends AppCompatActivity {
 
     void getMatchResult()
     {
-        retrofit2.Call<List<MatchResult>> call = (retrofit2.Call<List<MatchResult>>) myMatchResultPlaceHolderAPI.getsUserGenreResult(1);
+
+        Call<List<MatchResult>> call = myMatchResultPlaceHolderAPI.getMatchResult(1);
 
         call.enqueue(new Callback<List<MatchResult>>() {
 
@@ -50,6 +51,7 @@ public class MatchResultView extends AppCompatActivity {
             public void onResponse(Call<List<MatchResult>> call, Response<List<MatchResult>> response) {
                 if (response.isSuccessful()) {
                     Log.d("Success", "Reponse des MatchResult");
+
 
                 } else {
                     Log.d("Success", "Casser un truc");

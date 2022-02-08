@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Movinderproject"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LeMatch"
+            android:exported="false" />
+        <activity
             android:name=".Messagerie"
             android:exported="false" />
         <activity

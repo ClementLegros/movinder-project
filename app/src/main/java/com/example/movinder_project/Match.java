@@ -100,13 +100,14 @@ public class Match extends AppCompatActivity {
             }
         });
     }
-
+   
     public void afficherFilmSuivant()
     {
-        if(indexFilm == 4)
+        if(indexFilm == movieList.size())
         {
-            //Intent i = new Intent(this, "lol");
-            //startActivity(i);
+            Intent i = new Intent(this, LeMatch.class);
+            i.putExtra("idUser", idUser);
+            startActivity(i);
         }
 
         Film filmFetch = movieList.get(indexFilm);
@@ -172,6 +173,12 @@ public class Match extends AppCompatActivity {
 
     public void goToMessage(View view) {
         Intent i = new Intent(this, ConversationView.class);
+        i.putExtra("idUser", idUser);
+        startActivity(i);
+    }
+
+    public void goToMatch(View view) {
+        Intent i = new Intent(this, LeMatch.class);
         i.putExtra("idUser", idUser);
         startActivity(i);
     }

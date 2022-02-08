@@ -7,23 +7,50 @@
     android:layout_height="fill_parent"
     tools:context=".Register">
 
+    <TextView
+        android:id="@+id/lbNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.279" />
+
+    <TextView
+        android:id="@+id/lbSexe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sexe :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
+
     <EditText
         android:id="@+id/editTextPhone"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
+        android:layout_width="285dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="57dp"
         android:layout_marginTop="518dp"
         android:layout_marginEnd="39dp"
         android:layout_marginBottom="168dp"
         android:contentDescription="Renseignez votre numéro de téléphone"
         android:ems="10"
-        android:hint="Numéro de téléphone"
+        android:importantForAccessibility="yes"
         android:inputType="phone"
+        android:nextFocusUp="@id/idTextOrientation"
+        android:nextFocusDown="@id/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
 
     <TextView
         android:id="@+id/textView"
@@ -45,28 +72,31 @@
 
     <EditText
         android:id="@+id/editTextMail"
-        android:layout_width="318dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="248dp"
-        android:layout_marginEnd="53dp"
+        android:layout_marginEnd="41dp"
         android:layout_marginBottom="438dp"
         android:contentDescription="Créez votre identifiant de connexion"
         android:drawablePadding="5dp"
         android:gravity="start"
-        android:hint="Email"
+        android:importantForAccessibility="yes"
         android:inputType="text"
+        android:nextFocusUp="@id/editTextNom"
+        android:nextFocusDown="@id/editTextMdp"
         android:textCursorDrawable="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
     <EditText
         android:id="@+id/editTextMdp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="38dp"
         android:layout_marginStart="55dp"
         android:layout_marginTop="312dp"
         android:layout_marginEnd="48dp"
@@ -74,14 +104,17 @@
         android:contentDescription="Créez votre mot de passe de connexion"
         android:drawablePadding="5dp"
         android:gravity="start"
-        android:hint="Mot de passe"
+        android:importantForAccessibility="yes"
         android:inputType="textPassword"
+        android:nextFocusUp="@id/editTextMail"
+        android:nextFocusDown="@id/editTextSexe"
         android:textCursorDrawable="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
 
     <ImageView
         android:id="@+id/toggle_view2"
@@ -96,8 +129,8 @@
 
     <EditText
         android:id="@+id/editTextSexe"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:layout_marginStart="43dp"
         android:layout_marginTop="380dp"
         android:layout_marginEnd="40dp"
@@ -105,32 +138,38 @@
         android:contentDescription="Renseignez votre adresse mail"
         android:drawablePadding="5dp"
         android:gravity="start"
-        android:hint="Sexe"
+        android:importantForAccessibility="yes"
         android:inputType="textEmailAddress"
+        android:nextFocusUp="@id/editTextMdp"
+        android:nextFocusDown="@id/idTextOrientation"
         android:textCursorDrawable="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/idTextOrientation"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_width="260dp"
+        android:layout_height="38dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="450dp"
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="236dp"
         android:contentDescription="Orientation"
         android:ems="10"
-        android:hint="Orientation"
+        android:importantForAccessibility="yes"
         android:inputType="text"
+        android:nextFocusUp="@id/editTextSexe"
+        android:nextFocusDown="@id/editTextPhone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/register"
@@ -141,6 +180,8 @@
         android:layout_marginEnd="76dp"
         android:layout_marginBottom="69dp"
         android:contentDescription="Bouton pour valider son inscription"
+        android:importantForAccessibility="yes"
+        android:nextFocusUp="@id/editTextPhone"
         android:gravity="center"
         android:onClick="toRegister"
         android:text="Je m'inscris"
@@ -154,19 +195,71 @@
 
     <EditText
         android:id="@+id/editTextNom"
-        android:layout_width="327dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
         android:layout_marginStart="42dp"
         android:layout_marginTop="186dp"
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="500dp"
         android:contentDescription="Renseignez votre nom"
         android:ems="10"
-        android:hint="Nom"
+        android:focusable="true"
+        android:importantForAccessibility="yes"
         android:inputType="textPersonName"
+        android:nextFocusDown="@id/editTextMail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
+
+    <TextView
+        android:id="@+id/lbOrientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Orientation :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+
+    <TextView
+        android:id="@+id/lbPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.744" />
+
+    <TextView
+        android:id="@+id/lbMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mail :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <TextView
+        android:id="@+id/lbPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.453" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -46,7 +47,7 @@ public class Messagerie extends AppCompatActivity {
         if(extras != null)
         {
             this.idUser = extras.getInt("idUser");
-            this.idConversation = extras.getInt("getConversation");
+            this.idConversation = extras.getInt("idConversation");
         }
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -83,9 +84,12 @@ public class Messagerie extends AppCompatActivity {
                         Log.d("API", m.getMessage());
                         Button btn1 = new Button(context);
                         btn1.setText(m.getMessage());
+                        if(m.getId_utilisateur() != idUser)
+                        {
+                            btn1.setBackgroundColor(3);
+                        }
                         l_layout.addView(btn1);
                     }
-
 
                 } else {
                     Log.d("API", "Casser un truc");
@@ -97,5 +101,8 @@ public class Messagerie extends AppCompatActivity {
                 Log.d("Success", "Casser un truc²");
             }
         });
+    }
+
+    public void sendMessage(View view) {
     }
 }

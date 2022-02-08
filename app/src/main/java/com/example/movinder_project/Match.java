@@ -4,21 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Icon;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.movinder_project.Model.Conversation;
 import com.example.movinder_project.Model.Film;
 import com.example.movinder_project.Model.FilmPlaceHolderAPI;
 import com.example.movinder_project.Model.UtilisateurPlaceHolderAPI;
+import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.List;
+import java.util.Random;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -33,23 +39,27 @@ public class Match extends AppCompatActivity {
     private int idUser;
     private FilmPlaceHolderAPI myFilmPlaceHolderAPI;
     private Context context;
-    private List<Film> movieList;
+    public List<Film> movieList;
     private UtilisateurPlaceHolderAPI myUtilisateurPlaceHolderAPI;
 
+    private int indexFilm;
+    private List<Integer> listIdFilm;
     private int idFilmActuelle;
-    private Uri uriFilm;
+    private ImageView imgViewMovie;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match);
 
-        this.idUser = 999;
         Bundle extras = getIntent().getExtras();
         if(extras != null)
         {
             this.idUser = extras.getInt("idUser");
         }
+
+        imgViewMovie = findViewById(R.id.imageViewFilm);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://themovinder.herokuapp.com")
@@ -58,15 +68,27 @@ public class Match extends AppCompatActivity {
         myFilmPlaceHolderAPI = retrofit.create(FilmPlaceHolderAPI.class);
         get_movies();
 
+        indexFilm = 0;
+
     }
 
     void get_movies() {
+        context = this;
         Call<List<Film>> call = myFilmPlaceHolderAPI.getsFilms();
         call.enqueue(new Callback<List<Film>>() {
             @Override
             public void onResponse(Call<List<Film>> call, Response<List<Film>> response) {
                 if (response.isSuccessful()) {
                     Log.d("Success", "Reponse des films");
+                    movieList = response.body();
+
+                    Film filmFetch = movieList.get(indexFilm);
+                    idFilmActuelle = filmFetch.getId_film();
+                    Picasso.get().load(filmFetch.getAffiche()).into(imgViewMovie);
+
+                    indexFilm += 1;
+
+                    //afficherFilmForMatch();²
                 } else {
                     Log.d("Success", "Casser un truc");
                     return;
@@ -79,6 +101,26 @@ public class Match extends AppCompatActivity {
         });
     }
 
+    public void afficherFilmSuivant()
+    {
+        if(indexFilm == 4)
+        {
+            //Intent i = new Intent(this, "lol");
+            //startActivity(i);
+        }
+
+        Film filmFetch = movieList.get(indexFilm);
+        idFilmActuelle = filmFetch.getId_film();
+        Picasso.get().load(filmFetch.getAffiche()).into(imgViewMovie);
+
+        indexFilm += 1;
+
+    }
+
+
+
+    //#region buttonMovie
+
     public void likeMovie(View view) {
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -87,6 +129,8 @@ public class Match extends AppCompatActivity {
                 .build();
         myUtilisateurPlaceHolderAPI = retrofit.create(UtilisateurPlaceHolderAPI.class);
         movieLikedOrNot(true);
+
+        afficherFilmSuivant();
     }
 
     public void dontLikeMovie(View view)
@@ -97,6 +141,13 @@ public class Match extends AppCompatActivity {
                 .build();
         myUtilisateurPlaceHolderAPI = retrofit.create(UtilisateurPlaceHolderAPI.class);
         movieLikedOrNot(false);
+
+        afficherFilmSuivant();
+    }
+
+    public void notSeenMovie(View view) {
+
+        afficherFilmSuivant();
     }
 
     void movieLikedOrNot(boolean avis)
@@ -124,4 +175,7 @@ public class Match extends AppCompatActivity {
         i.putExtra("idUser", idUser);
         startActivity(i);
     }
+
+
+    //#endregion
 }
